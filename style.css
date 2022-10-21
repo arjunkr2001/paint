@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 }
 body{
     height: 100vh;
@@ -24,6 +27,7 @@ canvas{
     border-radius: 50px;
     background-color: cyan;
     padding: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     transition: 1s;
 }
 .ctrl:hover{
