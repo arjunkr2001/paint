@@ -31,3 +31,28 @@ canvas.addEventListener('pointerup',(e)=>{
     drawing = false
     ctx.beginPath()
 })
+const x = document.querySelector('span')
+const ctrl = document.getElementById('ctrl')
+
+ctrl.addEventListener('pointerenter',(e)=>{
+    if(e.pointerType === "mouse")
+        x.innerText = '❌';
+})
+ctrl.addEventListener('pointerleave',(e)=>{
+    if(e.pointerType === "mouse")
+        x.innerText = '🔨';
+        // ctrl.style.pointerEvents = 'auto';
+})
+x.addEventListener('pointerdown',(e)=>{
+    if(e.pointerType === 'touch'){
+        if(x.innerText !== '🔨')
+            ctrl.style.pointerEvents = 'none';
+        setTimeout(()=>{ctrl.style.pointerEvents = 'auto'},1000)
+    }
+})
+window.addEventListener('click',()=>{
+    if(window.getComputedStyle(size).display  === 'none')
+        x.innerText = '🔨'
+    else
+        x.innerText = '❌';
+})
