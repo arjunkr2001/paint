@@ -4,7 +4,7 @@
     box-sizing: border-box;
     -webkit-user-select: none;
     -ms-user-select: none;
-    user-select: none; 
+    user-select: none;
 }
 body{
     height: 100vh;
@@ -28,7 +28,7 @@ canvas{
     background-color: cyan;
     padding: 5px;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-    transition: 1s;
+    transition: 0.5s;
 }
 .ctrl:hover{
     width: auto;
@@ -58,7 +58,7 @@ input[type=color]{
     background: none;
     outline: none;
     /* display: none; */
-    transition: 1s;
+    transition: 0.5s;
     transition-delay: 0.5s;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -70,6 +70,9 @@ input[type="color"]::-webkit-color-swatch {
 }
 input[type=range]{
     display: none;
-    transition: 1s;
+    transition: 0.5s;
     transition-delay: 0.5s;
+}
+.ctrl:hover span{
+    padding-left: 10px;
 }
