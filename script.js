@@ -8,6 +8,9 @@ window.addEventListener('resize',()=>{
     ctx.putImageData(idata,0,0)
 })
 const ctx = canvas.getContext("2d")
+ctx.fillStyle = "#FFFFFF"
+ctx.fillRect(0,0,canvas.width,canvas.height)
+ctx.fillStyle = "#000000"
 const clr = document.getElementById("clr")
 const size = document.getElementById("size")
 let drawing = false
@@ -56,3 +59,12 @@ window.addEventListener('click',()=>{
     else
         x.innerText = '❌';
 })
+
+function download(){
+    const a = document.createElement('a');
+    document.body.appendChild(a);
+    a.href = canvas.toDataURL();
+    a.download = 'image.png';
+    a.click();
+    document.body.removeChild(a);
+}
